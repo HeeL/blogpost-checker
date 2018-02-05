@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com/HeeL/too-old-blogpost-check.git"
   },
+  "engines": {
+    "node": "8"
+  },
   "keywords": [
     "jekyll",
     "github",
