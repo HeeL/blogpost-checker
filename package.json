@@ -2,21 +2,23 @@
   "name": "too-old-blogpost-check",
   "version": "1.0.0",
   "description": "Check if jekyll blogpost is not outdated before merge",
-  "main": "index.js",
+  "author": "Sergii Paryzhskyi <parizhskiy@gmail.com> (https://github.com/HeeL)",
+  "license": "MIT",
+  "repository": "https://github.com/HeeL/too-old-blogpost-check.git",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "probot run ./index.js",
+    "test": "jest"
   },
   "dependencies": {
     "probot": "^5.0.0"
   },
   "devDependencies": {
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/HeeL/too-old-blogpost-check.git"
+    "jest": "^21.2.1",
+    "smee-client": "^1.0.1"
   },
   "engines": {
-    "node": "8"
+    "node": ">= 8.9.0",
+    "npm": ">= 5.0.0"
   },
   "keywords": [
     "jekyll",
@@ -24,11 +26,5 @@
     "probot",
     "probot-plugin",
     "probot-app"
-  ],
-  "author": "Sergii Paryzhskyi (github.com/HeeL)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/HeeL/too-old-blogpost-check/issues"
-  },
-  "homepage": "https://github.com/HeeL/too-old-blogpost-check#readme"
+  ]
 }
