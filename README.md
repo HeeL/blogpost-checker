@@ -9,6 +9,9 @@ Sometimes it happend that you start to write a blogpost and it takes too long be
 # Install dependencies
 npm install
 
+# Run test
+npm test
+
 # Run the bot
 npm start
 ```
