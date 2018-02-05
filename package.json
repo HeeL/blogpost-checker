@@ -1,0 +1,25 @@
+{
+  "name": "too-old-blogpost-check",
+  "version": "1.0.0",
+  "description": "Check if jekyll blogpost is not outdated before merge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/HeeL/too-old-blogpost-check.git"
+  },
+  "keywords": [
+    "jekyll",
+    "github",
+    "probot",
+    "probot-plugin"
+  ],
+  "author": "Sergii Paryzhskyi (github.com/HeeL)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HeeL/too-old-blogpost-check/issues"
+  },
+  "homepage": "https://github.com/HeeL/too-old-blogpost-check#readme"
+}
