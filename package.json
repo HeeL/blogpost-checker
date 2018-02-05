@@ -22,7 +22,8 @@
     "jekyll",
     "github",
     "probot",
-    "probot-plugin"
+    "probot-plugin",
+    "probot-app"
   ],
   "author": "Sergii Paryzhskyi (github.com/HeeL)",
   "license": "MIT",
