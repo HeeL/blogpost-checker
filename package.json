@@ -7,6 +7,7 @@
   "repository": "https://github.com/HeeL/too-old-blogpost-check.git",
   "scripts": {
     "start": "probot run ./index.js",
+    "dev:start": "nodemon --exec 'npm start'",
     "test": "jest"
   },
   "dependencies": {
@@ -14,6 +15,7 @@
   },
   "devDependencies": {
     "jest": "^21.2.1",
+    "nodemon": "^1.14.12",
     "smee-client": "^1.0.1"
   },
   "engines": {
