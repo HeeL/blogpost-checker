@@ -3,38 +3,25 @@ const axios = require('axios');
 
 const defaultRobot = { log: jest.fn() };
 
-it('fetches a diff url for actions `created`', () => {
+it('fetches a diff url for action `synchronize`', () => {
     const getStub = jest.fn().mockReturnValue(Promise.resolve());
     axios.get = getStub;
     const diffUrl = 'diff-url';
     const context = {
-        action: 'created',
-        payload: { pull_request: { diff_url: diffUrl } }
+        payload: {
+            action: 'synchronize',
+            pull_request: { diff_url: diffUrl } },
     };
-    pullRequest(context, defaultRobot);
+    pullRequest(defaultRobot, context);
 
     expect(getStub).toHaveBeenCalledTimes(1);
     expect(getStub).toHaveBeenCalledWith(diffUrl);
 });
 
-it('fetches a diff url for actions `edited`', () => {
-    const getStub = jest.fn().mockReturnValue(Promise.resolve());
-    axios.get = getStub;
-    const diffUrl = 'foo-bar-url';
-    const context = {
-        action: 'edited',
-        payload: { pull_request: { diff_url: diffUrl } }
-    };
-    pullRequest(context, defaultRobot);
-
-    expect(getStub).toHaveBeenCalledTimes(1);
-    expect(getStub).toHaveBeenCalledWith(diffUrl);
-});
-
-it('DOES NOT fetches actions that are different from `created` or `edited`', () => {
+it('DOES NOT fetches actions that are different from `synchronize`', () => {
     axios.get = jest.fn();
-    const context = { action: 'created2' };
-    pullRequest(context, defaultRobot);
+    const context = { payload: { action: 'synchronize2' } };
+    pullRequest(defaultRobot, context);
 
     expect(axios.get).toHaveBeenCalledTimes(0);
 });

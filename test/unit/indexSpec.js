@@ -13,5 +13,6 @@ it('handles pull request', () => {
   index(robot);
 
   expect(robot.on).toHaveBeenCalledTimes(1)
-  expect(robot.on).toHaveBeenCalledWith('pull_request', pullRequest);
+  const firstArgumentOfFunctionCall = robot.on.mock.calls[0][0];
+  expect(firstArgumentOfFunctionCall).toEqual('pull_request');
 });
