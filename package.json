@@ -1,10 +1,10 @@
 {
-  "name": "too-old-blogpost-check",
+  "name": "blogpost-checker",
   "version": "1.0.0",
   "description": "Check if jekyll blogpost is not outdated before merge",
   "author": "Sergii Paryzhskyi <parizhskiy@gmail.com> (https://github.com/HeeL)",
   "license": "MIT",
-  "repository": "https://github.com/HeeL/too-old-blogpost-check.git",
+  "repository": "https://github.com/HeeL/blogpost-checker.git",
   "scripts": {
     "start": "probot run ./index.js",
     "dev:start": "nodemon --exec 'npm start'",
