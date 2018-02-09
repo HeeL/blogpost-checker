@@ -10,7 +10,12 @@
     "dev:start": "nodemon --exec 'npm start'",
     "test": "jest"
   },
+  "jest": {
+    "testRegex": "/test/unit/.*Spec.js$",
+    "setupTestFrameworkScriptFile": "<rootDir>/test/unit/setup.js"
+  },
   "dependencies": {
+    "axios": "^0.17.1",
     "probot": "^5.0.0"
   },
   "devDependencies": {

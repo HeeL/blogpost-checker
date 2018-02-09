@@ -1,5 +1,5 @@
-const index = require('../index');
-const pullRequest = require('../src/pullRequest');
+const index = require('../../index');
+const pullRequest = require('../../src/pullRequest');
 
 it('logs out robot success message on start', () => {
   const robot = { log: jest.fn(), on: jest.fn() }
