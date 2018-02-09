@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "probot": "^5.0.0"
+    "probot": "^5.0.0",
+    "healthcheck-ping": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
