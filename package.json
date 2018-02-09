@@ -8,7 +8,9 @@
   "scripts": {
     "start": "probot run ./index.js",
     "dev:start": "nodemon --exec 'npm start'",
-    "test": "jest"
+    "test": "jest",
+    "pretest": "npm run lint",
+    "lint": "eslint ."
   },
   "jest": {
     "testRegex": "/test/unit/.*Spec.js$",
