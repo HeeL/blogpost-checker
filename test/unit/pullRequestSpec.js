@@ -10,9 +10,10 @@ describe('pullRequest handler', () => {
       axios.get = getStub;
       const diffUrl = 'diff-url';
       const context = {
-          payload: {
-              action: 'synchronize',
-              pull_request: { diff_url: diffUrl } },
+        payload: {
+          action: 'synchronize',
+          pull_request: { diff_url: diffUrl },
+        },
       };
       pullRequest(defaultRobot, context);
 
