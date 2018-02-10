@@ -1,7 +1,19 @@
-const pullRequest = require('../../src/pullRequest');
+const pullRequest = require('../../../src/pullRequest');
 const axios = require('axios');
 
 const defaultRobot = { log: jest.fn() };
+
+const createContext = (action, diffUrl = '') => ({
+  payload: {
+    action,
+    pull_request: {
+      diff_url: diffUrl,
+      head: { sha: '' }
+    },
+  },
+  repo: () => {},
+  github: { repos: { createStatus: () => {} } }
+});
 
 describe('pullRequest handler', () => {
   describe('fetch', () => {
@@ -9,12 +21,7 @@ describe('pullRequest handler', () => {
       const getStub = jest.fn().mockReturnValue(Promise.resolve());
       axios.get = getStub;
       const diffUrl = 'diff-url';
-      const context = {
-        payload: {
-          action: 'synchronize',
-          pull_request: { diff_url: diffUrl },
-        },
-      };
+      const context = createContext('synchronize', diffUrl);
       pullRequest(defaultRobot, context);
 
       expect(getStub).toHaveBeenCalledTimes(1);
@@ -23,7 +30,7 @@ describe('pullRequest handler', () => {
 
     it('DOES NOT fetches actions that are different from `synchronize`', () => {
       axios.get = jest.fn();
-      const context = { payload: { action: 'synchronize2' } };
+      const context = createContext('synchronize2');
       pullRequest(defaultRobot, context);
 
       expect(axios.get).toHaveBeenCalledTimes(0);
