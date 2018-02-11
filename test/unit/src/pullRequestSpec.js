@@ -18,7 +18,7 @@ const createContext = (action, diffUrl = '') => ({
 describe('pullRequest handler', () => {
   describe('fetch', () => {
     it('fetches a diff url for action `synchronize`', () => {
-      const getStub = jest.fn().mockReturnValue(Promise.resolve());
+      const getStub = jest.fn().mockReturnValue(Promise.resolve(''));
       axios.get = getStub;
       const diffUrl = 'diff-url';
       const context = createContext('synchronize', diffUrl);
