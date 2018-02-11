@@ -25,7 +25,7 @@ describe('setPullRequestState', () => {
       context: 'Blogpost Checker',
       description: 'publish date should be updated',
       sha: 'foo-sha',
-      state: 'pending',
+      state: 'failure',
       target_url: 'https://github.com/apps/blogpost-checker'
     };
     const context = createContext(repoStub, createStatusStub);
@@ -56,7 +56,7 @@ describe('setPullRequestState', () => {
 
     expect(repoStub).toHaveBeenCalledTimes(1);
     const { state, description } = repoStub.mock.calls[0][0];
-    expect(state).toBe('pending');
+    expect(state).toBe('failure');
     expect(description).toBe('publish date should be updated');
   });
 });
