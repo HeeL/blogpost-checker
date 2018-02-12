@@ -1,9 +1,9 @@
 --
-  diff --git a/_posts/2018-01-12-blablahbla-name-of-the-post.md b/_posts/2018-01-12-blablahbla-name-of-the-post.md
+  diff --git a/_posts/2018-01-14-blablahbla-name-of-the-post.md b/_posts/2018-01-14-blablahbla-name-of-the-post.md
   new file mode 100644
   index 0000000..ebac6c9
   --- /dev/null
-  +++ b/_posts/2018-01-12-blablahbla-name-of-the-post.md
+  +++ b/_posts/2018-01-14-blablahbla-name-of-the-post.md
   @@ -0,0 +1 @@
   +---
   +layout: post
