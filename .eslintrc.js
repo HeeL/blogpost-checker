@@ -7,6 +7,7 @@ module.exports = {
     "it": true,
     "describe": true,
     "jest": true,
-    "expect": true
+    "expect": true,
+    "afterEach": true
   }
 };
