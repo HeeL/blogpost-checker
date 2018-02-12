@@ -1,3 +1,5 @@
+const R = require('ramda');
+
 const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
 
 const diffDatesInDays = (date1, date2) =>
@@ -15,8 +17,8 @@ const containOutdatedPublishDate = (diffChunk) => {
   return false;
 };
 
-module.exports = (diffContent) => {
-  const diffChunks = diffContent.split('  diff --git');
-
-  return (diffChunks.filter(containOutdatedPublishDate)).length === 0;
-};
+module.exports = R.pipe(
+  R.split('  diff --git'),
+  R.filter(containOutdatedPublishDate),
+  R.isEmpty,
+);
