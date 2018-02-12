@@ -1,22 +1,22 @@
 --
-  diff --git a/_posts/2018-01-14-blablahbla-name-of-the-post.md b/_posts/2018-01-14-blablahbla-name-of-the-post.md
-  new file mode 100644
-  index 0000000..ebac6c9
-  --- /dev/null
-  +++ b/_posts/2018-01-14-blablahbla-name-of-the-post.md
-  @@ -0,0 +1 @@
-  +---
-  +layout: post
-  +title:  "Bla bla bla Title"
-  +date: 2018-01-12 14:55:10 +0200
-  +categories: testing
-  +content of the file
-  \ No newline at end of file
-  diff --git a/test2.md b/test2.md
-  new file mode 100644
-  index 0000000..6321613
-  --- /dev/null
-  +++ b/test2.md
-  @@ -0,0 +1 @@
-  +another test
-  \ No newline at end of file
+diff --git a/_posts/2018-01-14-blablahbla-name-of-the-post.md b/_posts/2018-01-14-blablahbla-name-of-the-post.md
+new file mode 100644
+index 0000000..ebac6c9
+--- /dev/null
++++ b/_posts/2018-01-14-blablahbla-name-of-the-post.md
+@@ -0,0 +1 @@
++---
++layout: post
++title: "Bla bla bla Title"
++date: 2018-01-12 14:55:10 +0200
++categories: testing
++content of the file
+\ No newline at end of file
+diff --git a/test2.md b/test2.md
+new file mode 100644
+index 0000000..6321613
+--- /dev/null
++++ b/test2.md
+@@ -0,0 +1 @@
++another test
+\ No newline at end of file
