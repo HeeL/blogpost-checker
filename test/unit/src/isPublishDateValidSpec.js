@@ -17,4 +17,11 @@ describe('isPublishDateValid', () => {
 
     expect(isPublishDateValid(gitDiffNewFileWithOldDate)).toBe(false);
   });
+
+  it('returns true for diff with date older than 2 days if its not a new file', () => {
+    MockDate.set('2018-01-15');
+    const gitDiffEditFileWithOldDate = fs.readFileSync('./test/unit/resources/gitDiffEditFileWithOldDate.txt', 'utf8');
+
+    expect(isPublishDateValid(gitDiffEditFileWithOldDate)).toBe(true);
+  });
 });
