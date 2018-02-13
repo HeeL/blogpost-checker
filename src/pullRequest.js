@@ -3,7 +3,7 @@ const R = require('ramda');
 const setPullRequestState = require('./setPullRequestState');
 const isPublishDateValid = require('./isPublishDateValid');
 
-module.exports = async (robot, context) => {
+module.exports = (robot, context) => {
   if (context.payload.action === 'synchronize') {
     axios.get(context.payload.pull_request.diff_url)
       .then(R.prop('data'))
