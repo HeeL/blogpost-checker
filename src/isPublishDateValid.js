@@ -23,6 +23,5 @@ const isDiffWithNewFileWithPost =
 module.exports = R.pipe(
   R.split('diff --git'),
   R.filter(isDiffWithNewFileWithPost),
-  R.filter(containOutdatedPublishDate),
-  R.isEmpty,
+  R.none(containOutdatedPublishDate)
 );
