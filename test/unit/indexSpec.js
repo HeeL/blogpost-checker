@@ -16,12 +16,13 @@ it('logs out robot success message on start', () => {
 });
 
 it('handles pull request', () => {
+  const expectedListeners = ['pull_request.opened', 'pull_request.synchronize'];
   const robot = createRobotObject();
   index(robot);
 
   expect(robot.on).toHaveBeenCalledTimes(1);
   const firstArgumentOfFunctionCall = robot.on.mock.calls[0][0];
-  expect(firstArgumentOfFunctionCall).toEqual('pull_request');
+  expect(firstArgumentOfFunctionCall).toEqual(expectedListeners);
 });
 
 it('uses healthcheck-ping middleware for exposing healthcheck route', () => {

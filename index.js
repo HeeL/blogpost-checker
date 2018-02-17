@@ -7,5 +7,5 @@ module.exports = (robot) => {
   const app = robot.route();
   app.use(healthcheckPing('_health'));
 
-  robot.on('pull_request', pullRequest.bind(null, robot));
+  robot.on(['pull_request.opened', 'pull_request.synchronize'], pullRequest);
 };
